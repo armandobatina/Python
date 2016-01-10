@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Challenge</title>
+</head>
+{% load staticfiles %}
+<br>
+<body>
+<h1>
+    Insert a new user
+</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="name">Your name: </label>
+    <input id="name" type="text" name="name" value="{{ name }}">
+    <label for="email">Your name: </label>
+    <input id="email" type="email" name="email" value="{{ email }}">
+    <input type="submit" value="register">
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python Challenge</title>
+</head>
+{% load staticfiles %}
+<br>
+<body>
+<h1>List of all the Users</h1>
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}"/>
+{% if users %}
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    <tr>
+        {% for user in users %}
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<strong>There are no Users present.</strong>
+{% endif %}
+
+<a href="/">Homepage</a>
+</body>
+</html>
